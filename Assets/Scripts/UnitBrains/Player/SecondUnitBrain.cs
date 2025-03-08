@@ -21,14 +21,12 @@ namespace UnitBrains.Player
             // Homework 1.3 (1st block, 3rd module)
             ///////////////////////////////////////           
            
-               
+               //Если нынешняя температура больше или равна темпераратуры перегрева -> Прерываем метод
+               if(GetTemperature() >= overheatTemperature )
+               return;
 
                for(int i = 0 ; i < GetTemperature() ; i++ ) 
                {  
-                   //Если нынешняя температура больше или равна темпераратуры перегрева -> Прерываем метод
-                   if(GetTemperature() >= overheatTemperature )
-                   return;
-                
                    // Создаем снаряд
                    var projectile = CreateProjectile(forTarget);
                    AddProjectileToList(projectile, intoList); 
